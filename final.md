@@ -427,7 +427,7 @@ The minimum rate at which a signal can be sampled without introducing errors.
 
 A filter that passes signals with a frequency lower than a selected cutoff frequency and attenuates signals with frequencies higher than the cutoff frequency.
 
-## IQ-Modulator : Complex Signal
+## IQ-Modulator : Complex Signal (iq stands for in-phase and quadrature)
 
 A modulator that modulates a carrier signal with a complex signal.
 
@@ -901,9 +901,13 @@ Sonar (sound navigation and ranging or sonic navigation and ranging) is a techni
 
 ## CAP Theorem
 
-- Consistency
-- Availability
-- Partition Tolerance
+- Consistency: Every read receives the most recent write or an error.
+- Availability: Every request receives a (non-error) response, without the guarantee that it contains the most recent write.
+- Partition Tolerance: The system continues to operate despite an arbitrary number of messages being dropped (or delayed) by the network between nodes.
+
+- CA: Traditional RDBMS
+- CP: MongoDB, Redis, HBase, Neo4J, etc.
+- AP: Cassandra, CouchDB, DynamoDB, etc.
 
 ## Database Replication
 
